@@ -11,5 +11,5 @@
 |
 */
 
-get('blog', 'BlogController@index');
+get('/', 'BlogController@index');
 get('blog/{slug}', 'BlogController@showPost');
