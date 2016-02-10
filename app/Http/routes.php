@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+get('blog', 'BlogController@index');
+get('blog/{slug}', 'BlogController@showPost');
