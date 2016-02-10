@@ -20,7 +20,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Post::class, function ($faker) {
+$factory->define(App\Post::class, function (Faker\Generator $faker) {
     return [
     'title' => $faker->sentence(mt_rand(3, 10)),
     'content' => join("\n\n", $faker->paragraphs(mt_rand(3, 6))),
