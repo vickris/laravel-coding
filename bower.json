@@ -1,4 +1,5 @@
-"name": "l5beauty",
+{
+  "name": "l5beauty",
   "description": "My awesome blog",
   "ignore": [
     "**/.*",
@@ -6,3 +7,9 @@
     "vendor/bower_dl",
     "test",
     "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "bootstrap": "^3.3.6"
+  }
+}
