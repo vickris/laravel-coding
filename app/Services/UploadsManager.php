@@ -140,4 +140,64 @@ class UploadsManager
             $this->disk->lastModified($path)
         );
     }
+
+    /**
+   * Create a new directory
+   */
+    public function createDirectory($folder)
+    {
+        $folder = $this->cleanFolder($folder);
+
+        if ($this->disk->exists($folder)) {
+            return "Folder '$folder' aleady exists.";
+        }
+
+        return $this->disk->makeDirectory($folder);
+    }
+
+  /**
+   * Delete a directory
+   */
+    public function deleteDirectory($folder)
+    {
+        $folder = $this->cleanFolder($folder);
+
+        $filesFolders = array_merge(
+            $this->disk->directories($folder),
+            $this->disk->files($folder)
+        );
+        if (! empty($filesFolders)) {
+            return "Directory must be empty to delete it.";
+        }
+
+        return $this->disk->deleteDirectory($folder);
+    }
+
+  /**
+   * Delete a file
+   */
+    public function deleteFile($path)
+    {
+        $path = $this->cleanFolder($path);
+
+        if (! $this->disk->exists($path)) {
+            return "File does not exist.";
+        }
+
+        return $this->disk->delete($path);
+    }
+
+  /**
+   * Save a file
+   */
+    public function saveFile($path, $content)
+    {
+        $path = $this->cleanFolder($path);
+
+        if ($this->disk->exists($path)) {
+            return "File already exists.";
+        }
+
+        return $this->disk->put($path, $content);
+    }
 }
