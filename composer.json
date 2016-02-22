@@ -9,7 +9,8 @@
         "laravel/framework": "5.1.*",
         "michelf/php-markdown": "^1.6",
         "michelf/php-smartypants": "1.6.0-beta1",
-        "dflydev/apache-mime-types": "^1.0"
+        "dflydev/apache-mime-types": "^1.0",
+        "league/flysystem-aws-s3-v3": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
