@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Services\Markdowner;
 
 class Post extends Model
 {

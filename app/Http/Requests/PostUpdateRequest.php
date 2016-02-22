@@ -13,7 +13,7 @@ class PostUpdateRequest extends PostCreateRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
