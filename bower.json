@@ -13,6 +13,7 @@
     "bootstrap": "^3.3.6",
     "font-awesome": "fontawesome#~4.5.0",
     "datatables": "~1.10.11",
-    "datatables-plugins": "~1.10.11"
+    "datatables-plugins": "~1.10.11",
+    "selectize": "~0.12.1"
   }
 }
